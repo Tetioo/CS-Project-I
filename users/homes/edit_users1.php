@@ -92,7 +92,7 @@ if (isset($_POST['update_users'])) {
 
             </section>
 
-            <section class="edit-form-container">
+            <section class="edit-form-container" >
 
                 <?php
 
@@ -103,7 +103,7 @@ if (isset($_POST['update_users'])) {
                         while ($fetch_edit = mysqli_fetch_assoc($edit_query)) {
                 ?>
 
-                            <form action="" method="post" enctype="multipart/form-data">
+                            <form class="form-inline" action="" method="post" enctype="multipart/form-data">
                                 <input type="hidden" name="update_id" value="<?php echo $fetch_edit['id']; ?>">
                                 <input type="text" class="box" required name="update_fullname" value="<?php echo $fetch_edit['fullname']; ?>">
                                 <input type="text" class="box" required name="update_email" value="<?php echo $fetch_edit['email']; ?>">
