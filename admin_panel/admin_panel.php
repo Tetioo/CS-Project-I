@@ -2,9 +2,7 @@
 
 session_start();
 
-if (!isset($_SESSION['role'])) {
-    die( header('location:admin_login.php?error=Please log in to access admin page') );
-}
+
 
 ?>
 
@@ -43,38 +41,25 @@ if (!isset($_SESSION['role'])) {
     <div class="content">
         <div class="cards">
             <div class="card">
-                <a href="../hotel_offers/insert_offer_hotel.php">Add Hotel for Offers</a>
+                <a href="../hotel_offers/insert_offer_hotel.php">Add Chilren's Homes</a>
             </div>
 
             <div class="card">
-                <a href="../hotel_offers/insert_room_type.php">Add Room Types for Offers</a>
+                <a href="../hotel_offers/insert_room_type.php">Add Companies</a>
             </div>
 
-            <div class="card">
+            <!--   
+             <div class="card">
                 <a href="../hotel_offers/insert_offer_hotel_services.php">Add Hotel Offers Services</a>
             </div>
+         -->
 
             <div class="card">
-                <a href="../hotel_offers/view_hotel_offers.php">View Hotel Offer Services</a>
+                <a href="../hotel_offers/view_hotel_offers.php">View Children's Homes</a>
             </div>
 
             <div class="card">
-                <a href="../hotel_offers/view_hotel_offer_bookings.php">View Hotel Offer Bookings</a>
-            </div>
-
-            <div class="card">
-                <a href="../agent/admin_page_agents.php">Add Agents</a>
-            </div>
-
-            <div class="card">
-                <a href="../countrycityview/viewcities.php">View Cities</a>
-            </div>
-
-            <div class="card">
-                <a href="../countrycityview/viewcountries.php">View Countries</a>
-            </div>
-             <div class="card">
-                <a href="../customer/delete_users.php">View Users</a>
+                <a href="../hotel_offers/view_hotel_offer_bookings.php">View Companies</a>
             </div>
 
         </div>
