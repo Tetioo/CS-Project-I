@@ -34,7 +34,7 @@ th {
   background-color: rgb(60, 95, 117);
   color: rgb(255,255,255);
 }
-  a.delete-btn{
+a.delete-btn{
     color: rgb(60, 95, 117);
 }
 a.edit-btn{
@@ -45,3 +45,30 @@ a.style{
   text-decoration: none;
   color: rgb(60, 95, 117);
 }
+
+.form-inline {  
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+  
+.form-inline input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+.form-inline button {
+    padding: 5px 20px;
+    background-color: rgb(60, 95, 117);
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+  }
+  
+.form-inline button:hover {
+    background-color: rgb(67, 73, 77);
+  }
+
