@@ -35,8 +35,8 @@ if (isset($_GET['delete'])) {
 <body>
 
     
-
-                <table style="margin-left: 10px;">
+<div class="wrapper" >
+                <table >
 
                   <thead>
                   <th>ID</th>
@@ -44,8 +44,9 @@ if (isset($_GET['delete'])) {
                   <th>Email</th>
                   <th>Phone</th>
                   <th>Address</th>
+                  <th>Operation</th>
 
-                  <th colspan="2" align="center">operations</th>
+                  
                     </thead>
 
                     <tbody>
@@ -65,7 +66,7 @@ if (isset($_GET['delete'])) {
 
                                     <td>
                                         <a href="delete_users.php?delete=<?php echo $row['id']; ?>" class="delete-btn" onclick="return confirm('are your sure you want to delete this?');"><i class="fas fa-trash"></i> Delete </a>
-                                        <a href="edit_users.php?edit=<?php echo $row['id']; ?>" class="edit-btn" onclick="return confirm('are your sure you want to edit this?');"><i class="fas fa-edit"></i> update </a>
+                                        <a href="edit_users1.php?edit=<?php echo $row['id']; ?>" class="edit-btn" onclick="return confirm('are your sure you want to edit this?');"><i class="fas fa-edit"></i> update </a>
                                     </td>
                                 </tr>
 
@@ -85,7 +86,7 @@ if (isset($_GET['delete'])) {
     </div>
 
 
-
+ </div>
 </body>
 
 </html>
