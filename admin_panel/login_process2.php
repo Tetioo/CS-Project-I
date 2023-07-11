@@ -1,41 +1,43 @@
-<?php      
-    session_start();
-    
-    include('../config.php'); 
+<?php
+session_start();
+include('../config.php'); 
 
-    if (isset($_POST['submit'])) {
+// Check if the user is already logged in
+if (isset($_SESSION["username"])) {
+    header("Location: admin_panel.php");
+    exit();
+}
 
-        $username = $_POST['username'];  
-        $password = $_POST['password'];  
-      
-        //to prevent from mysqli injection  
-        $username = stripcslashes($username);  
-        $password = stripcslashes($password);  
+// Handle form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-        $username = mysqli_real_escape_string($conn, $username);  
-        $password = mysqli_real_escape_string($conn, $password);  
-      
-        $sql = "SELECT * FROM `admin` WHERE username = '$username' AND password = '$password'";
-        $result = mysqli_query($conn, $sql);
-        
-        if ($result === false) {
-            // Check for SQL errors
-            echo 'SQL Error: ' . mysqli_error($conn);
-            exit();
-        }
-        
-        $execution_results = mysqli_num_rows($result);
-        
-        if ($execution_results) {
-            echo '<script>alert("Login Successful")</script>';
-            header('Refresh: 1; URL=admin_panel.php');
+    // Prepare and execute the query
+    $stmt = $conn->prepare("SELECT * FROM `admin` WHERE username = ? AND password = ?");
+    $stmt->bind_param("ss", $username, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows == 1) {
+        $row = $result->fetch_assoc();
+        $hashedPassword = $row["password"];
+
+        // Verify the password
+        if (password_verify($password, $hashedPassword)) {
+            // Credentials are valid, start the user session
+            $_SESSION["username"] = $username;
+            header("Location: admin_panel.php");
             exit();
         }
     }
-      
-       
-    
-    
-    mysqli_close($conn);
 
-?>  
+    // Invalid credentials, display an error message
+    $error = "Invalid username or password";
+
+    // Close the database connection
+    $stmt->close();
+    $conn->close();
+}
+
+?>
