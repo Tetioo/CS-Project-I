@@ -11,7 +11,7 @@ $errors = [];
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     echo "on submit";
    // Retrieve the form input values
-   $fullname = mysqli_real_escape_string($conn, $_POST['name']);
+   $name = mysqli_real_escape_string($conn, $_POST['name']);
    $email = mysqli_real_escape_string($conn, $_POST['email']);
    $phoneNumber = mysqli_real_escape_string($conn, $_POST['phonenumber']);
    $address = mysqli_real_escape_string($conn, $_POST['address']);
