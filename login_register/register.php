@@ -33,7 +33,7 @@
       };
       ?>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Full name">
+          <input type="text" class="form-control" name="name" id="name" placeholder="Company name">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
