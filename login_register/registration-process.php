@@ -11,7 +11,7 @@ $errors = [];
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     echo "on submit";
    // Retrieve the form input values
-   $fullname = mysqli_real_escape_string($conn, $_POST['fullname']);
+   $fullname = mysqli_real_escape_string($conn, $_POST['name']);
    $email = mysqli_real_escape_string($conn, $_POST['email']);
    $phoneNumber = mysqli_real_escape_string($conn, $_POST['phonenumber']);
    $address = mysqli_real_escape_string($conn, $_POST['address']);
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
          $errors[] = 'Passwords do not match!';
       } else {
          // Insert the user data into the database
-         $insert = "INSERT INTO users (fullname, email, phonenumber, address, password) VALUES('$fullname', '$email', '$phoneNumber', '$address', '$password')";
+         $insert = "INSERT INTO users (name, email, phonenumber, address, password) VALUES('$name', '$email', '$phoneNumber', '$address', '$password')";
          if(mysqli_query($conn, $insert)){
             header("Location: login.php?message=Registration Successful");
             exit();
