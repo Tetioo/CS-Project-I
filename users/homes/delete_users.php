@@ -59,7 +59,7 @@ if (isset($_GET['delete'])) {
 
                                 <tr>
                                     <td><?php echo $row['id']; ?></td>
-                                    <td><?php echo $row['fullname']; ?></td>
+                                    <td><?php echo $row['name']; ?></td>
                                     <td><?php echo $row['email']; ?></td>
                                     <td><?php echo $row['phonenumber']; ?></td>
                                     <td><?php echo $row['address']; ?></td>
