@@ -16,9 +16,9 @@ Distribution System: The system coordinates the logistics of delivering the dona
 
 Nutrition Monitoring: NourishKids emphasizes the importance of providing nutritious meals to vulnerable children. The system keeps track of the nutritional value of donated food items and ensures that the meals provided meet the necessary dietary requirements.
 
-Reporting and Analytics: NourishKids generates comprehensive reports and analytics to evaluate the impact of the program. This information can be used to measure the reduction in food wastage, monitor the nutritional intake of children, and make data-driven decisions for program improvements.
+Reporting and Analytics: NourishKids generates comprehensive reports and analytics to evaluate the impact of the program. This information can be used to measure the reduction in food wastage, monitor the nutritional intake of children, and make data-driven decisions for program improvements. 
 
-Usage
+## Usage
 
 Once NourishKids is up and running, the system can be used by different user types:
 
