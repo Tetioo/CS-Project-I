@@ -36,7 +36,23 @@
 			<a href="">Home</a>
 			<a href="">About</a>
 			<a href="">Contact</a>
-			<a href="../login_register/login.php" class="login">Login/Register</a>
+			
+			<?php
+			if (!isset($_SESSION['id'])) {
+			?>
+				<a href="../login_register/login.php" class="login">Login/Register</a>
+			<?php
+			}
+			?>
+
+			<?php
+			if (isset($_SESSION['id'])) {
+			?>
+				<a href="../login_register/logout.php" class="login">Logout</a>
+				<a href ="">Welcome, <?php echo ($_SESSION['email']);?></a>
+			<?php
+			}
+			?>
 		</nav>
 
 		<div id="menu-btn" class="fas fa-bars"></div>
