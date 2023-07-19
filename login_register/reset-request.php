@@ -67,7 +67,7 @@ $mail->SMTPAuth = true;
 
 $mail->Username = 'rotich.mercy@strathmore.edu';
 $mail->Password = 'wgxpscsxdspeegdd';
-$mail->setFrom('Nourishkids@gmail.com', 'From Name (freeform string)');
+$mail->setFrom('Nourishkids@gmail.com', 'From Nourishkids');
 $mail->addAddress('rotich.mercy@strathmore.edu'); //call this multiple times for multiple recipients
 $mail->Subject = 'Received Message From Nourishkids';
 $mail->msgHTML('<p>Here is your reset link: </br> <a href="' . $url . '">' . $url . '</a></p>');
