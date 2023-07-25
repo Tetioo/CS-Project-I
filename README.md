@@ -7,7 +7,7 @@ Food wastage is a global problem that not only leads to significant economic los
 The core idea of NourishKids is to establish partnerships with companies that have surplus food due to various reasons, such as excess production, nearing expiration dates, or packaging defects. By collaborating with these companies, NourishKids collects the surplus food and distributes it efficiently to children's homes, orphanages, and other organizations catering to vulnerable children.
 
 ## Features
-
+aaaaa
 Food Donation Management: NourishKids provides a platform for companies to donate their surplus food. The system facilitates the collection, storage, and inventory management of donated food items.
 
 Inventory Tracking: NourishKids keeps track of all donated food items, including their quantity, expiry dates, and nutritional information. This ensures efficient utilization and prevents wastage of donated food.
